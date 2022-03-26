@@ -15,7 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         };
         const response = await fetch(
-          process.env.BACKEND_URL + `/api/tracked`,
+          "http://api.carmd.com/v3.0/maint?vin=${vin}&mileage={mileage}",
           options
         );
         if (response.status === 200) {
