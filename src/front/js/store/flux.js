@@ -5,7 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       carmaintenance: []
     },
     actions: {
-      loadInformation: async () => {
+      loadInformationvin: async () => {
         const store = getStore();
         const actions = getActions();
         const session = actions.getCurrentSession();

@@ -10,7 +10,21 @@ export const Carinput = () => {
 
   return (
     <div>
-      <form>
+      <form onSubmit={(e) => {
+        if (
+          vin == "" ||
+          mileage == ""
+        ) {
+          alert(
+            "Cannot Submit without a VIN and mileage"
+          );
+          e.preventDefault();
+        } else {
+          actions
+            .loadInformationvin(vin, mileage)
+            .then(e.preventDefault());
+        }
+      }}>
         <div className="form-container col-3 m-auto">
           <label for="vin" className="form-label">
             Car VIN

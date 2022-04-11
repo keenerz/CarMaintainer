@@ -14,9 +14,8 @@ export const Carinfo = (props) => {
   );
 };
 
-Carinfo.propTypes = {
-  year: PropTypes.string,
-  make: PropTypes.string,
-  model: PropTypes.string,
-
-};
+// Carinfo.propTypes = {
+//   year: PropTypes.string,
+//   make: PropTypes.string,
+//   model: PropTypes.string,
+// };
