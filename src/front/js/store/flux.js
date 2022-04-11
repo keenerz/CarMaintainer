@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
       carinfo: {},
+      carmaintenance: []
     },
     actions: {
       loadInformation: async () => {
@@ -20,7 +21,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         );
         if (response.status === 200) {
           const payload = await response.json();
-          setStore({ tracked: payload });
+          setStore({ carmaintenance: payload.data });
         }
       },
     },
