@@ -13,12 +13,28 @@ export const Carinfo = (props) => {
         <p>Car Make: {store.carinfo?.make}</p>
         <p>Car Model: {store.carinfo?.model}</p>
       </div>
+      <div>
+        <h4>Car Maintenance</h4>
+        <div>
+        <ul>
+          {store.carmaintenace?.map((singleMaintenance, i) => {
+            return (
+              <li
+                className=""
+                key={i}
+              >
+                <div
+                  className=""
+                >
+                  {singleMaintenance.desc}
+
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        </div>
+      </div>
     </div>
   );
 };
-
-// Carinfo.propTypes = {
-//   year: PropTypes.string,
-//   make: PropTypes.string,
-//   model: PropTypes.string,
-// };
