@@ -17,7 +17,7 @@ export const Carinfo = (props) => {
         <h4>Car Maintenance</h4>
         <div>
         <ul>
-          {store.carmaintenace?.map((singleMaintenance, i) => {
+          {store.carmaintenance.map((singleMaintenance, i) => {
             return (
               <li
                 className=""
@@ -26,8 +26,11 @@ export const Carinfo = (props) => {
                 <div
                   className=""
                 >
-                  {singleMaintenance.desc}
-
+                  Maintenance: {singleMaintenance.desc}
+                  <br></br>
+                  Mileage:{singleMaintenance.due_mileage}
+                  <br></br>
+                  
                 </div>
               </li>
             );
