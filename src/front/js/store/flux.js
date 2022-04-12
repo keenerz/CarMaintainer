@@ -5,7 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       carmaintenance: []
     },
     actions: {
-      loadInformationvin: async () => {
+      loadInformationvin: async (vin, mileage) => {
         const store = getStore();
         const actions = getActions();
         const session = actions.getCurrentSession();
@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           },
         };
         const response = await fetch(
-          "http://api.carmd.com/v3.0/maint?vin=${vin}&mileage=${mileage}",
+          f`http://api.carmd.com/v3.0/maint?vin=${vin}&mileage=${mileage}`,
           options
         );
         if (response.status === 200) {

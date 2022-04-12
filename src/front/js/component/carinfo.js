@@ -7,9 +7,12 @@ export const Carinfo = (props) => {
   const { store, actions } = useContext(Context);
   return (
     <div>
-      <p>Car Year: {store.carinfo?.year}</p>
-      <p>Car Make: {store.carinfo?.make}</p>
-      <p>Car Model: {store.carinfo?.model}</p>
+      <div>
+        <h4>Car Info</h4>
+        <p>Car Year: {store.carinfo?.year}</p>
+        <p>Car Make: {store.carinfo?.make}</p>
+        <p>Car Model: {store.carinfo?.model}</p>
+      </div>
     </div>
   );
 };

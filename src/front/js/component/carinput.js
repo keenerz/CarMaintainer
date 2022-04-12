@@ -29,27 +29,43 @@ export const Carinput = () => {
           <label for="vin" className="form-label">
             Car VIN
           </label>
-          <input className="form-control" name="vin" value={vin}></input>
+          <input className="form-control" name="vin" value={vin} placeholder="1FAFP45X83F403461"></input>
         </div>
           <div className="form-container col-3 m-auto">
             <label for="vin" className="form-label">
             Mileage
           </label>
-          <input className="form-control" name="vinmileage" value={mileage}></input>
+          <input className="form-control" name="vinmileage" value={mileage} placeholder="69420"></input>
         </div>
+        <button>Submit</button>
       </form>
       <h5>or</h5>
-      <form>
+      <form onSubmit={(e) => {
+        if (
+          model == "" ||
+          mileage == ""
+        ) {
+          alert(
+            "Cannot Submit without a model info and mileage"
+          );
+          e.preventDefault();
+        } else {
+          actions
+            .loadInformationvin(model, mileage)
+            .then(e.preventDefault());
+        }
+      }}>
         <div className="form-container col-3 m-auto">
           <label for="models" className="form-label">
             Car Year, Make, and Model
           </label>
-          <input className="form-control" name="models" value={model}></input>
+          <input className="form-control" name="models" value={model} placeholder="1996 Ford Pinto"></input>
           <label for="models" className="form-label">
             Mileage
           </label>
-          <input className="form-control" name="modelsmileage" value={mileage}></input>
+          <input className="form-control" name="modelsmileage" value={mileage} placeholder="69420"></input>
         </div>
+        <button>Submit</button>
       </form>
     </div>
   );
