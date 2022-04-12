@@ -20,7 +20,7 @@ export const Carinfo = (props) => {
           {store.carmaintenance.map((singleMaintenance, i) => {
             return (
               <li
-                className=""
+                className="justify-content-start"
                 key={i}
               >
                 <div
@@ -30,7 +30,7 @@ export const Carinfo = (props) => {
                   <br></br>
                   Mileage:{singleMaintenance.due_mileage}
                   <br></br>
-                  
+
                 </div>
               </li>
             );
