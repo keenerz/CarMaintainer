@@ -19,12 +19,13 @@ export const Carinfo = (props) => {
           <ul>
             {store.carmaintenance.map((singleMaintenance, i) => {
               return (
-                <li className="justify-content-start" key={i}>
-                  <div className="card">
-                    Maintenance: {singleMaintenance.desc}
+                <li className="d-flex justify-content-center" key={i}>
+                  <div className="card inline-block">
+                    <div className="float-start">
+                      Mileage:{singleMaintenance.due_mileage}
+                    </div>
                     <br></br>
-                    Mileage:{singleMaintenance.due_mileage}
-                    <br></br>
+                    <div>Maintenance: {singleMaintenance.desc}</div>
                   </div>
                 </li>
               );
