@@ -30,7 +30,9 @@ export const Carinfo = (props) => {
                             </div>
                           </td>
                           <td>
-                            <div>Maintenance: {singleMaintenance.desc}</div>
+                            <div className="float-end">
+                              Maintenance: {singleMaintenance.desc}
+                            </div>
                           </td>
                         </tr>
                       </tbody>
